@@ -1,0 +1,76 @@
+html{
+    height: 100%;
+}
+
+
+body {
+	background-color: #0f111a;
+	color: white !important;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	min-height: 100%;
+}
+
+input{
+	margin-bottom: 0 !important;
+}
+
+hr{
+	margin-top: 0px !important;
+	margin-bottom: 15px !important;
+	border-top: 5px solid #1EAEDB !important;
+	width: 15% !important;
+	text-align: center;
+}
+
+.row{
+	display: flex;
+}
+
+.firstPart, .secondPart{
+	margin-bottom: 50px;
+}
+
+.thirdPart{
+	display: flex !important;
+	flex-direction: row !important;
+	justify-content: center;
+	width: 100%;
+}
+
+.columns{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.main-title {
+	text-align: center;
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
+
+.main-title-margin{
+	margin-bottom: 40px !important;
+}
+
+#generateCode, #copyCode{
+	margin-right: 20px;
+}
+
+#preHeader{
+	margin-top: 10px;
+	display: none;
+}
+
+#finalCode{
+	width: 100%;
+	height: 100%;
+}
+
+.fourthPart, textarea[name="finalCode"], #copyCode{
+	display: none;
+}
+

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="css/skeleton.css">
+        <title>MSD Template Generator</title>
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="twelve columns noCSS">
+                    <h1 class="main-title">MSD Template Generator</h1>
+                    <hr class="main-title-margin">
+                </div>
+            </div>
+
+            <form>
+                <div class="row firstPart">
+                    <div class="six columns">
+                        <label for="templatetitle">Template title</label>
+                        <hr>
+                        <input id="templateTitle" class="u-full-width" type="text" placeholder="The template title...">
+                    </div>
+
+                    <div class="six columns">
+                        <label for="headerLogos">How many logos?</label>
+                        <hr>
+                        <div>
+                            <input type="radio" name="logos" value="1"> 1
+                        </div>
+                        <div>
+                            <input type="radio" name="logos" value="2"> 2
+                        </div>
+                    </div>
+
+                    <div class="six columns">
+                        <label for="mainTitle">Main title</label>
+                        <hr>
+                        <input id="mainTitle" class="u-full-width" type="text" placeholder="Main title...">
+                    </div>
+                </div>
+
+                <div class="row secondPart">
+                    <div class="six columns">
+                        <label for="preheaderTitle">PreHeader?</label>
+                        <hr>
+                        <div>
+                            <input type="radio" name="preheader" onclick="preHeaderEnable();" value="yes"> Yes
+                        </div>
+                        <div>
+                            <input type="radio" name="preheader" onclick="preHeaderEnable();" value="no"> No&nbsp;&nbsp;
+                        </div>
+                        <input id="preHeader" class="u-full-width" type="text" placeholder="Preheader here...">
+                    </div>
+
+                    <div class="six columns">
+                        <label for="socialMediaTitle">How many Social Media Logos?</label>
+                        <hr>
+                        <div>
+                            <input type="radio" name="socialMedia" value="1"> 1
+                        </div>
+                        <div>
+                            <input type="radio" name="socialMedia" value="2"> 2
+                        </div>
+                        <div>
+                            <input type="radio" name="socialMedia" value="3"> 3
+                        </div>
+                    </div>
+
+                    <div class="six columns">
+                        <label for="mainTitle">Codex Nº</label>
+                        <hr>
+                        <input id="codex" class="u-full-width" type="text" placeholder="Codex Nº...">
+                    </div>
+                </div>
+                <div class="row thirdPart">
+                    <div class="six columns thirdPart">
+                        <button id="generateCode" class="button-primary" onclick="generate();return false;">Generate Code</button>
+                        <button id="copyCode" class="button-primary" onclick="copyToClipboard(); return false;">Copy to Clipboard</button>
+                        <button type="button" id="resetForm" class="button-primary" onclick="resetAll();">Reset</button>
+                        <textarea name="finalCode" id="finalCode" cols="30" rows="10" type="hidden"></textarea>
+                    </div>
+                </div>
+
+                <div class="row fourthPart">
+                    <div class="twelve columns">
+                        <iframe id="iframePreview" srcdoc="" width="650" height="1600" frameborder="10"></iframe>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+
+
+        <script src="js/clipboard.min.js"></script>
+        <script src="js/app.js"></script>
+
+        <script>
+            new ClipboardJS('#copyCode');
+        </script>
+    </body>
+
+</html>
