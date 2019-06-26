@@ -1,10 +1,9 @@
-let nameCLM;
-let keyMessages;
+let mainFolder;
+let subFolders;
 let finalCodeFolders;
 let finalCodeVeeva;
 let copyCodeFolders;
 let copyCodeVeeva;
-let e;
 
 function reload() {
 	document
@@ -13,8 +12,8 @@ function reload() {
 	document
 		.querySelector("#resetForm")
 		.addEventListener("click", resetForm);
-	nameCLM = document.querySelector("#nameCLM");
-	keyMessages = document.querySelector("#keyMessages");
+	mainFolder = document.querySelector("#mainFolder");
+	subFolders = document.querySelector("#subFolders");
 	finalCodeFolders = document.querySelector("#finalCodeFolders");
 	finalCodeVeeva = document.querySelector("#finalCodeVeeva");
 }
@@ -29,22 +28,22 @@ function generateStructureCLM(e) {
 
 function createFolders() {
 	let keyMessagesModified;
-	nameCLM = nameCLM.value;
-	keyMessages = keyMessages.value;
+	mainFolder = mainFolder.value;
+	subFolders = subFolders.value;
 	//Remove linebreaks and replace for commas & Remove the last comma.
-	keyMessagesModified = keyMessages
+	keyMessagesModified = subFolders
 		.split("\n")
 		.join(",")
 		.slice(0, -1);
 	//Generate the final code to create Folders
-	finalCodeFolders.value = `mkdir -p ${nameCLM}/{${keyMessagesModified}}`;
+	finalCodeFolders.value = `mkdir -p ${mainFolder}/{${keyMessagesModified}}`;
 }
 
 function createStructureVeeva() {
 	let keyMessagesArray;
 	let order = 0;
-	//KeyMessages in Array
-	keyMessagesArray = keyMessages.split("\n");
+	//subFolders in Array
+	keyMessagesArray = subFolders.split("\n");
 	//Remove the empty last item.
 	keyMessagesArray.pop();
 
