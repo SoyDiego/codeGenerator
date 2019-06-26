@@ -9,6 +9,6 @@ You can test it here: [Test Newsletter Template Generator](http://soydiego.com.a
 # Directories Structure Generator
 - Generates code to create the main folder and a number X of subfolders / directories inside of its to use it via Console.  
 
-[![Screenshot Directories Structure Generator](https://i.gyazo.com/292f9188c6a285470743cdc0605accdc.gif)](https://gyazo.com/292f9188c6a285470743cdc0605accdc)  
+You can test it here: [Test Directories Structure Generator](http://soydiego.com.ar/myCodes/codeGenerator/directoriesStructureGenerator/)  
 
-You can test it here: [Test Directories Structure Generator](http://soydiego.com.ar/myCodes/codeGenerator/directoriesStructureGenerator/)
+[![Screenshot Directories Structure Generator](https://i.gyazo.com/292f9188c6a285470743cdc0605accdc.gif)](https://gyazo.com/292f9188c6a285470743cdc0605accdc)
